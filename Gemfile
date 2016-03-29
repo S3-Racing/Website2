@@ -13,6 +13,16 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+# Use Bootstrap for templating
+gem 'bootstrap-sass'
+# for nice icons
+gem 'font-awesome-rails'
+# import progressbar
+gem 'ruby-progressbar'
+#for user login/registration
+gem 'devise'
+#for better error tracking in production
+gem 'newrelic_rpm'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -41,5 +51,16 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'quiet_assets' # Turns off the Rails asset pipeline log
+  gem 'bullet' # help reduce sql query speeds
+  gem 'lol_dba' # helps scan for better indexing
+  gem 'brakeman' #ez security scanner
+  gem 'rubocop' #ez formatting scanner
 end
+
+group :production do 
+    # Use postgresql as the database for Active Record
+    gem 'pg'
+end
+
 
